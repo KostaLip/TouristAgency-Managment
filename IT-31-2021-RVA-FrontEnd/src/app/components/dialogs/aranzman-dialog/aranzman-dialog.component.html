@@ -1,0 +1,46 @@
+<div class = container>
+    <h3 mat-dialog-title *ngIf="flag == 1">Dodavanje aranzmana</h3>
+    <h3 mat-dialog-title *ngIf="flag == 2">Ažuriranje aranzmana: {{data.id}}</h3>
+    <h3 mat-dialog-title *ngIf="flag == 3">Brisanje aranzmana: {{data.id}}</h3>
+  
+    <form class="mat-dialog-content" #formControl="ngForm">
+  
+    <div class = "form">
+      <mat-form-field>
+        <input matInput placeholder="Ukupna Cena" name="Ukupna Cena" [disabled]="flag==3" [(ngModel)]="data.ukupnaCena" required />
+        <span matSuffix>RSD</span>
+      </mat-form-field>
+    </div>
+  
+    <div class = "form">
+      <mat-checkbox name ="Placeno" [disabled]="flag==3" [(ngModel)]="data.placeno">
+        Placeno
+      </mat-checkbox>
+    </div>
+
+    <div class = form>
+        <mat-form-field>
+          <input matInput [matDatepicker]="datumKreiranja" placeholder="Datum Kreiranja" name="Datum Kreiranja" [disabled]="flag==3" [(ngModel)]="data.datumRealizacije" required />
+          <mat-datepicker-toggle matSuffix [for]="datumKreiranja"></mat-datepicker-toggle>
+          <mat-datepicker #datumKreiranja></mat-datepicker>
+      </mat-form-field>
+      </div>
+  
+    <div class = "form">
+      <mat-select [compareWith]="compare" placeholder = "Hotel" name="Hotel"
+      [disabled]="flag==3" [(ngModel)] ="data.hotel" required>
+        <mat-option *ngFor="let hotel of hoteli" [value]="hotel">
+          {{hotel.naziv}}
+        </mat-option>
+      </mat-select>
+    </div>
+    
+    </form>
+    
+    <div class="mat-dialog-actions">
+      <button matButton *ngIf="flag == 1" type="submit" mat-dialog-close="1" [disabled]="!formControl.valid" (click)="add()">Sačuvaj</button>
+      <button matButton *ngIf="flag == 2" type="submit" mat-dialog-close="1" [disabled]="!formControl.valid" (click)="update()">Modifikuj</button>
+      <button matButton *ngIf="flag == 3" mat-dialog-close="1" (click)="delete()">Obriši</button>
+      <button matButton (click)="cancel()">Poništi</button>
+  </div>
+  </div>

@@ -1,0 +1,118 @@
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+  }
+  
+  header .logo h1 {
+    margin: 0;
+    text-align: center;
+  }
+  
+  main {
+    padding: 20px 0;
+  }
+  
+  #author-info {
+    padding: 50px 0;
+  }
+  
+  #author-info .container {
+    text-align: center;
+  }
+  
+  #author-info h2 {
+    font-size: 32px;
+    color: #9e5d5d;
+  }
+  
+  #author-info p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #dbc7c7;
+  }
+  
+  .contact-info {
+    margin-top: 20px;
+  }
+  
+  .social-links {
+    margin-top: 20px;
+  }
+  
+  .social-links a {
+    display: inline-block;
+    margin-right: 50px;
+    color: #e78484;
+    text-decoration: none;
+  }
+
+  .social-links a i {
+    font-size: 24px; 
+    transition: all 0.3s ease;
+  }
+  
+.social-links a:hover {
+    color: #488898;
+  }
+  
+  #contact-form {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+  }
+  
+  #contact-form .container {
+    text-align: center;
+  }
+  
+  #contact-form h2 {
+    font-size: 32px;
+    color: #333;
+  }
+  
+  form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
